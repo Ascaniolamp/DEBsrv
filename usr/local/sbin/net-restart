@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ -n $1 ]]; then
+	systemctl restart $1
+	exit $?
+fi
+
+SERVICES=(nftables networking sshd apache2 cockpit smbd docker containerd)
+
+for SERVICE in "${SERVICES[@]}"; do
+	systemctl restart $SERVICE
+	echo RESTARTED $SERVICE
+	systemctl status $SERVICE | head -n 3
+done

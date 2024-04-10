@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  minecraft-server:
+    container_name: minecraft-server
+    image: itzg/minecraft-server:latest
+    restart: unless-stopped
+    ports:
+      - '25565:25565'
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /srv/minecraft-server:/data
+      - /srv/minecraft-server/mods:/mods:ro
+
+    environment:
+      EULA: TRUE
+      TYPE: FORGE
+      VERSION: 1.20.1
+
+      DEBUG: TRUE
+      SNOOPER_ENABLED: FALSE
+      ONLINE_MODE: FALSE
+      SERVER_NAME: My Server :-)
+      MOTD: Come on in!
+
+      #WORLD: /srv/minecraft-server/world
+      ENABLE_COMMAND_BLOCK: TRUE
+
+      ICON: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Minecraft_cube.svg/640px-Minecraft_cube.svg.png
+      MAX_PLAYERS: 10
+      ENABLE_WHITELIST: FALSE
+      #WHITELIST: Player
+
+      RCON_CMDS_STARTUP: /say Server online.
+      RCON_CMDS_ON_CONNECT: /say Hello!
+      RCON_CMDS_ON_DISCONNECT: /say Goodbye!
+      RCON_CMDS_FIRST_CONNECT: /say Welcome!
+      RCON_CMDS_LAST_DISCONNECT: /say Server shutdown.

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+FILE=/sys/class/backlight/intel_backlight/brightness
+OFF=0
+LOW=1000
+MID=48000
+MAX=96000
+
+case $1 in
+?)
+	cat $FILE
+	exit
+	;;
+
+*[0-9]*) SCREEN=$1 ;;
+
+off) SCREEN=$OFF ;;
+low) SCREEN=$LOW ;;
+mid) SCREEN=$MID ;;
+max) SCREEN=$MAX ;;
+
+*)
+	echo Invalid argument $1
+	exit 1
+	;;
+esac
+
+# To close laptop screen without blackout:
+#
+# /etc/systemd/logind.conf
+# HandleSuspendKey=ignore
+# HandleLidSwitch=ignore
+
+echo $SCREEN >>$FILE
+
