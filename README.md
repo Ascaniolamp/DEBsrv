@@ -10,8 +10,10 @@ Turn an old debian-running laptop into a mobile server by uploading the DEBsrv u
 - Samba
 
 ## Setup instructions
-The configuration files are placed in the `etc` folder and, as the name suggests, must be moved to the `/etc` directory of the device.
-We reccomend you change these, based on your preferences and necessities.
+Every folder inside the repo corresponds to a root folder inside the linux filesystem.
+For example, files in the repo's `etc` folder must be moved into linux's `/etc` folder.
+
+The configuration files are placed in the `etc` folder, we reccomend you change these, based on your preferences and necessities.
 
 The `usr` directory contains CLI scripts to facilitate tasks such as turning off the laptop's display, restarting every 
 
