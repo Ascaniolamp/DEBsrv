@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eo pipefail
 
 FILE=/sys/class/backlight/intel_backlight/brightness
 OFF=0
