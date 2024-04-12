@@ -15,4 +15,4 @@ We reccomend you change these, based on your preferences and necessities.
 
 The `usr` directory contains CLI scripts to facilitate tasks such as turning off the laptop's display, restarting every 
 
-The `srv` folder contains 
+The `srv` folder contains a `docker` directory in which docker compose files are located, and a `www` directory containing the apache2 webpage.
