@@ -7,7 +7,10 @@ A set of scripts, configurations and utilities to operate a basic home server.
 </div>
 
 ## <div align="center" id="Install"> ⚠️ Requirements ⚠️ </div>
-Docker, Apache2, Cockpit, Samba
+[Docker](https://docker.com),
+[Apache2](https://httpd.apache.org),
+[Cockpit](https://cockpit-project.org),
+[Samba](https://samba.org)
 
 ## <div align="center" id="Install"> 📥 🖥️ Install 🖥️ 📥 </div>
 Every folder inside the `src` folder corresponds to a root folder inside the linux filesystem.
