@@ -6,7 +6,7 @@ A set of scripts, configurations and utilities to operate a basic home server.
 <sup>Turn an old debian-running laptop into a mobile server by uploading the DEBsrv utilities pack on your machine!</sup>
 </div>
 
-## <div align="center" id="Install"> ⚠️ Requirements ⚠️ </div>
+## <div align="center" id="Requirements"> ⚠️ Requirements ⚠️ </div>
 [Docker](https://docker.com),
 [Apache2](https://httpd.apache.org),
 [Cockpit](https://cockpit-project.org),
